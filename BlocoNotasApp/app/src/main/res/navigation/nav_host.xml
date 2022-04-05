@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/listarFragment">
+
+    <fragment
+        android:id="@+id/listarFragment"
+        android:name="com.example.bloconotasapp.ListarFragment"
+        android:label="fragment_listar"
+        tools:layout="@layout/fragment_listar" >
+        <action
+            android:id="@+id/action_listarFragment_to_adicionarFragment"
+            app:destination="@id/adicionarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adicionarFragment"
+        android:name="com.example.bloconotasapp.AdicionarFragment"
+        android:label="fragment_adicionar"
+        tools:layout="@layout/fragment_adicionar" >
+        <action
+            android:id="@+id/action_adicionarFragment_to_listarFragment"
+            app:destination="@id/listarFragment" />
+    </fragment>
+</navigation>
